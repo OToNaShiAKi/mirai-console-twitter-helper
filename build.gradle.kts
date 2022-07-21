@@ -8,8 +8,16 @@ plugins {
 
 group = "com.otonashi"
 version = "0.1.0"
+val ktor_version: String by project
 
 repositories {
     maven("https://maven.aliyun.com/repository/public")
     mavenCentral()
 }
+dependencies {
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("io.ktor:ktor-client-cio:$ktor_version")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
+}
+
